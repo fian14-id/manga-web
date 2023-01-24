@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- feather-icon -->
+    <script src="node_modules/feather-icons/dist/feather.min.js"></script>
+    <!-- style -->
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    /> -->
+    <link rel="stylesheet" href="assets/slick/slick.css" />
+    <link rel="stylesheet" href="assets/slick/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Ngopi Bang</title>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar">
+      <a href="" class="navbar-logo"><b>Ngopi</b>&nbsp;Bang</a>
+      <div class="navbar-link">
+        <a href="">Home</a>
+        <a href="">Popular</a>
+        <a href="">All Manga</a>
+        <a href="">Help &quest;</a>
+      </div>
+      <div class="navbar-action">
+        <a href="" id="search"><i data-feather="search"></i></a>
+        <a href="" id="notif"><i data-feather="bell"></i></a>
+        <div class="account-dropdown">
+          <div class="navbar-action__account">
+            <img
+              src="assets/img/profile.jpg"
+              alt="profile"
+              width="25"
+              height="25"
+            />
+            <span id="account"></span>
+            <a href="" id="account-down">
+              <i data-feather="chevron-down"></i>
+            </a>
+          </div>
+          <div class="account-dropdown__content">
+            <a href=""
+              ><i data-feather="settings" style="width: 1rem"></i
+              >&nbsp;&nbsp;Account</a
+            >
+            <a href=""
+              ><i data-feather="moon" style="width: 1rem"></i>&nbsp;&nbsp;Dark
+              Mode</a
+            >
+          </div>
+        </div>
+        <span class="hamburger-menu" onclick="showNavbar()"
+          ><i data-feather="menu" style="width: 1rem"></i
+        ></span>
+      </div>
+    </nav>
+    <!-- end navigation -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- start main -->
+    <section class="Main-container">
+      <main class="Main-container__content">
+        <div class="Content-greeting">
+          <h1 id="greeting"></h1>
+          <p id="jokes"></p>
+        </div>
+        <br />
+        <div class="Content-title">
+          <h3>Recommendation</h3>
+          <!-- <div class="Content-title-button">
+            <span class="prev-arrow"><i data-feather="chevron-left"></i></span>
+            <span class="next-arrow"><i data-feather="chevron-right"></i></span>
+          </div> -->
+        </div>
+        <div class="single-slide">
+          <div
+            class="Card-box"
+            style="
+              background: url('assets/img/img\ \(1\).jpg') center;
+              background-size: cover;
+            "
+          >
+            <div class="Box-description recomd">
+              <strong>Tensei Shitara Slime Datta-ken</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div
+            class="Card-box"
+            style="
+              background: url('assets/img/img\ \(1\).jpg') center;
+              background-size: cover;
+            "
+          >
+            <div class="Box-description recomd">
+              <strong>Tensei Shitara Slime Datta-ken</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div
+            class="Card-box"
+            style="
+              background: url('assets/img/img\ \(1\).jpg') center;
+              background-size: cover;
+            "
+          >
+            <div class="Box-description recomd">
+              <strong>Tensei Shitara Slime Datta-ken</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+        </div>
+        <div class="Content-title">
+          <h3>Popular</h3>
+          <div class="Content-title-button">
+            <span class="prev-arrow"><i data-feather="chevron-left"></i></span>
+            <span class="next-arrow"><i data-feather="chevron-right"></i></span>
+          </div>
+        </div>
+        <div class="Content-card">
+          <div
+            class="Card-box"
+            style="background-image: url('assets/img/img\ \(1\).png')"
+          >
+            <div class="Box-description">
+              <strong>Tensei Shitara Slime Datta-ken</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div
+            class="Card-box"
+            style="background-image: url('assets/img/img\ \(2\).jpg')"
+          >
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div
+            class="Card-box"
+            style="background-image: url('assets/img/img\ \(3\).jpg')"
+          >
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+          <div class="Card-box">
+            <div class="Box-description">
+              <strong>Isekai Ojisan</strong>
+              <span>Action, Comedy</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- end main -->
+    <!-- start footer -->
+    <footer class="Footer">
+      <div class="Footer-main">
+        <h3>&copy;&nbsp;AllifianKuy&nbsp;&#47;&nbsp;<span id="year"></span></h3>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- script -->
+    <!-- <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script> -->
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <!-- <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script> -->
+
+    <script>
+      feather.replace();
+    </script>
+    <script type="text/javascript" src="assets/js/application.js"></script>
+  </body>
+</html>

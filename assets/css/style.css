@@ -1,0 +1,339 @@
+/* start configuration */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --primary: #222126;
+  --cwhite: #f6f9fc;
+  --white-light: #ffffff;
+  /* --primary: #f3efe0;
+  --csecond: #434242;
+  --cthird: #222222;
+  --sekunder: #22a39f; */
+  --bradius: 5px;
+  --fonts: "Poppins", sans-serif;
+  --public-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--cwhite);
+}
+
+/* end configuration */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--fonts);
+  background: var(--cwhite);
+  position: relative;
+}
+
+a {
+  color: var(--primary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  transition: all 0.2s linear;
+  background: var(--cwhite);
+}
+
+.navbar-logo {
+  font-size: 1.1rem;
+}
+
+.navbar-link a {
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+  display: inline-block;
+  transition: 0.2s linear;
+}
+
+.navbar-link a::after {
+  content: "";
+  display: block;
+  /* padding: 0 0 0.3rem 0; */
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar-link a:hover {
+  font-weight: 600;
+}
+.navbar-link a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar-action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-action a {
+  background: var(--white-light);
+  border-radius: var(--bradius);
+  display: flex;
+  padding: 5px 8px;
+  width: 2rem;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  background: var(--white-light);
+  border-radius: var(--bradius);
+  display: none;
+  padding: 2.5px 8px;
+  width: auto;
+}
+
+.navbar-action__account {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--white-light);
+  border-radius: var(--bradius);
+}
+
+#account {
+  font-size: 0.8rem;
+}
+
+.navbar-action__account img {
+  border-radius: 50%;
+}
+
+.account-dropdown__content {
+  display: none;
+  position: absolute;
+  background: var(--white-light);
+  min-width: 100%;
+  box-shadow: var(--public-shadow);
+  border-radius: var(--bradius);
+  z-index: 1;
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.account-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.account-dropdown:hover .account-dropdown__content {
+  display: block;
+}
+
+.account-dropdown__content a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.account-dropdown__content a:hover {
+  background: var(--cwhite);
+}
+
+.Main-container {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+#jokes {
+  font-size: 0.8rem;
+}
+
+.Content-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0.8rem 0 0.8rem 0;
+}
+
+.Content-title h3 {
+  opacity: 0.8;
+}
+
+.Content-title h3::after {
+  content: "";
+  display: block;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.5);
+  margin: 0 2.5rem 0 0;
+}
+
+.Content-title-button {
+  gap: 10px;
+  display: flex;
+}
+
+.Content-title-button span {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  width: 1.6rem;
+  cursor: pointer;
+  background: var(--white-light);
+}
+
+/* .Content-card::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 0.3rem;
+  background: transparent;
+}
+.Content-card::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--primary);
+} */
+.Content-card {
+  display: flex;
+  /* overflow: auto; */
+  scroll-behavior: smooth;
+  /* padding: 2rem; */
+  /* gap: 20px; */
+}
+
+.single-slide .Card-box .recomd {
+  /* background-size: cover; */
+  background: none;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.Card-box {
+  margin: 0 20px 0 0;
+  width: 100px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--bradius);
+  /* background: url("https://api.fian014.site/sfw/waifu") center; */
+  background: url("../img/img\ \(1\).jpg");
+  background-size: cover;
+  border-radius: var(--bradius);
+  position: relative;
+}
+
+.Box-description {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  padding: 0 8px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  bottom: 0;
+  color: var(--white-light);
+}
+
+.Box-description strong {
+  --max-line: 2;
+  --line-height: 1.3;
+
+  max-height: calc(var(--max-line) * 1em * var(--line-height));
+  line-height: var(--line-height);
+  overflow: hidden;
+}
+
+.Box-description strong {
+  font-size: 0.8rem;
+}
+/* .Box-description strong::after {
+  content: "...";
+  display: block;
+} */
+.Box-description span {
+  font-size: 0.7rem;
+}
+
+/* footer */
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin: 3rem 0 0 0;
+  font-size: 0.8rem;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 90.5%;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
+  .navbar-link {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: var(--white-light);
+    width: 12rem;
+    height: 100vh;
+    transition: 0.25s;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-link.active {
+    right: 0;
+  }
+
+  .navbar-link a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar-link a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar-link a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+/* mobile phone */
+@media (max-width: 500px) {
+  html {
+    font-size: 85%;
+  }
+
+  /* .navbar {
+    padding: 0.5rem 7%;
+  } */
+}

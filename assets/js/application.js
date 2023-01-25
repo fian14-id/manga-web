@@ -3,21 +3,40 @@ const navbarLink = document.querySelector(".navbar-link");
 const hamburger = document.querySelector(".hamburger-menu");
 const account = document.querySelector("#account");
 const jokes = document.querySelector("#jokes");
-let nama = "Ayaka";
+// let nama = "Ayaka";
 
 // default
 account.innerHTML = nama;
 document.querySelector("#year").innerHTML = new Date().getFullYear();
 
-// var getName = prompt("Who are you?");
-// if (getName) {
-//   account.innerHTML = getName;
-// } else if (getName === "") {
-//   account.innerHTML = "Orang Baik";
-// } else {
-//   alert("Waduh");
-//   window.location = "https://api.fian014.site/sfw/waifu";
-// }
+var getName = prompt("Who are you?");
+if (getName) {
+  account.innerHTML = getName;
+  //  greeting
+
+  let h = new Date().getHours();
+  let m = new Date().getMinutes();
+  let s = new Date().getSeconds();
+  if (h >= 4 && h < 10) greeting.innerHTML = `Selamat pagi, ${getName}`;
+  if (h >= 10 && h < 15) greeting.innerHTML = `Selamat siang, ${getName}`;
+  if (h >= 15 && h < 18) greeting.innerHTML = `Selamat sore, ${getName}`;
+  if (h >= 18 || h < 4) greeting.innerHTML = `Selamat malam, ${getName}`;
+} else if (getName === "") {
+  //  greeting
+
+  let h = new Date().getHours();
+  let m = new Date().getMinutes();
+  let s = new Date().getSeconds();
+  account.innerHTML = "Users" + h + m + s;
+  if (h >= 4 && h < 10) greeting.innerHTML = "Selamat pagi, Users" + h + m + s;
+  if (h >= 10 && h < 15)
+    greeting.innerHTML = "Selamat siang, Users" + h + m + s;
+  if (h >= 15 && h < 18) greeting.innerHTML = "Selamat sore, Users" + h + m + s;
+  if (h >= 18 || h < 4) greeting.innerHTML = "Selamat malam, Users" + h + m + s;
+} else {
+  alert("Waduh");
+  window.location = "https://api.fian014.site/sfw/waifu";
+}
 
 // toggle menu
 
@@ -32,16 +51,6 @@ document.addEventListener("click", function (e) {
     navbarLink.classList.remove("active");
   }
 });
-
-//  greeting
-
-let h = new Date().getHours();
-let m = new Date().getMinutes();
-let s = new Date().getSeconds();
-if (h >= 4 && h < 10) greeting.innerHTML = `Selamat pagi, ${nama}`;
-if (h >= 10 && h < 15) greeting.innerHTML = `Selamat siang, ${nama}`;
-if (h >= 15 && h < 18) greeting.innerHTML = `Selamat sore, ${nama}`;
-if (h >= 18 || h < 4) greeting.innerHTML = `Selamat malam, ${nama}`;
 
 // fetch jokes bapak2
 fetch("https://candaan-api.vercel.app/api/text/random")

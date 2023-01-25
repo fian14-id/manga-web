@@ -14,32 +14,6 @@ if (getName) {
   account.innerHTML = getName;
   //  greeting
 
-<<<<<<< HEAD
-  let h = new Date().getHours();
-  let m = new Date().getMinutes();
-  let s = new Date().getSeconds();
-  if (h >= 4 && h < 10) greeting.innerHTML = `Selamat pagi, ${getName}`;
-  if (h >= 10 && h < 15) greeting.innerHTML = `Selamat siang, ${getName}`;
-  if (h >= 15 && h < 18) greeting.innerHTML = `Selamat sore, ${getName}`;
-  if (h >= 18 || h < 4) greeting.innerHTML = `Selamat malam, ${getName}`;
-} else if (getName === "") {
-  //  greeting
-
-  let h = new Date().getHours();
-  let m = new Date().getMinutes();
-  let s = new Date().getSeconds();
-  if (h >= 4 && h < 10) greeting.innerHTML = "Selamat pagi, Users" + h + m + s;
-  if (h >= 10 && h < 15)
-    greeting.innerHTML = "Selamat siang, Users" + h + m + s;
-  if (h >= 15 && h < 18) greeting.innerHTML = "Selamat sore, Users" + h + m + s;
-  if (h >= 18 || h < 4) greeting.innerHTML = "Selamat malam, Users" + h + m + s;
-  account.innerHTML = "Orang Baik";
-} else {
-  alert("Waduh");
-  window.location = "https://api.fian014.site/sfw/waifu";
-}
-
-=======
   let h = new Date().getHours();
   let m = new Date().getMinutes();
   let s = new Date().getSeconds();
@@ -64,7 +38,6 @@ if (getName) {
   window.location = "https://api.fian014.site/sfw/waifu";
 }
 
->>>>>>> e9898e4e2c60311c3f7db02eb1e42f965e541e8d
 // toggle menu
 
 function showNavbar() {
